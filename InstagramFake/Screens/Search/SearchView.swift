@@ -12,26 +12,29 @@ struct SearchView: View {
     @State private var searchTerm = ""
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Find a developer")
-                    .font(.title.weight(.bold))
-                Text("Start searching for a developer to make your app...")
-                    .multilineTextAlignment(.center)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: AppConstants.Design.Padding.small) {
+                    ForEach(0 ... 15, id: \.self) { user in
+                        UserRowView()
+                    }
+                }
+                .padding(.top, AppConstants.Design.Padding.extraSmall)
             }
-            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(.gray)
-            .navigationTitle("Search")
-        }.searchable(text: $searchTerm) {
-            ForEach(oo.serchResults) { person in
-                PersonRowView(person: person)
+            .navigationTitle("Explore")
+            .navigationBarTitleDisplayMode(.inline)
+            .searchable(text: $searchTerm) {
+                ForEach(oo.serchResults) { person in
+                    PersonRowView(person: person)
+                }
             }
-        }
-        .onChange(of: searchTerm) { searchTerm in
-            oo.serchResults = oo.data.filter({ person in
-                person.name.contains(searchTerm)
-            })
+            .onChange(of: searchTerm) { searchTerm in
+                oo.serchResults = oo.data.filter({ person in
+                    person.name.contains(searchTerm)
+                })
+            }
         }
     }
 }

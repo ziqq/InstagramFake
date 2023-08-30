@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("Feed").tabItem {
+            FeedView().tabItem {
                 Image(systemName: "house.fill")
             }
-            Text("Search").tabItem {
+            SearchView().tabItem {
                 Image(systemName: "magnifyingglass")
             }
             Text("Feed").tabItem {
@@ -22,7 +22,7 @@ struct ContentView: View {
             Text("Upload Post").tabItem {
                 Image(systemName: "heart.fill")
             }
-            Text("Profile").tabItem {
+            ProfileView().tabItem {
                 Image(systemName: "person.fill")
             }
         }.accentColor(.black)
