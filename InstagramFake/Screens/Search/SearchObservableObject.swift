@@ -8,10 +8,10 @@
 import Foundation
 
 class SearchObservableObject: ObservableObject {
-    var data: [PersonalDataObject] = []
-    @Published var serchResults: [PersonalDataObject] = []
+    var data: [UserDataObject] = []
+    @Published var serchResults: [UserDataObject] = []
     
     init() {
-        data = MockService.shared.getData();
+        data = MockService.shared.getUsers();
     }
 }

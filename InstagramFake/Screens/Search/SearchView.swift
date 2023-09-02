@@ -15,26 +15,34 @@ struct SearchView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: AppConstants.Design.Padding.small) {
-                    ForEach(0 ... 15, id: \.self) { user in
-                        UserRowView()
+                    ForEach(oo.data) { user in
+                        NavigationLink(value: user) {
+                            UserRowView(user: user)
+                        }
                     }
                 }
                 .padding(.top, AppConstants.Design.Padding.extraSmall)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundColor(.gray)
-            .navigationTitle("Explore")
-            .navigationBarTitleDisplayMode(.inline)
-            .searchable(text: $searchTerm) {
-                ForEach(oo.serchResults) { person in
-                    PersonRowView(person: person)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .searchable(text: $searchTerm) {
+                    ForEach(oo.serchResults) { user in
+                        UserRowView(user: user)
+                    }
+                }
+                .onChange(of: searchTerm) { searchTerm in
+                    oo.serchResults = oo.data.filter({ user in
+                        if let fullName = user.fullName {
+                            return fullName.contains(searchTerm)
+                        } else {
+                            return false
+                        }
+                    })
                 }
             }
-            .onChange(of: searchTerm) { searchTerm in
-                oo.serchResults = oo.data.filter({ person in
-                    person.name.contains(searchTerm)
-                })
+            .navigationDestination(for: UserDataObject.self) { user in
+                ProfileView(user: user)
             }
+            .navigationTitle("Explore")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

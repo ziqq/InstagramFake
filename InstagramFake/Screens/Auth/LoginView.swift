@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    private let screenWidth = UIScreen.main.bounds.width;
+    private let screenWidth = UIScreen.main.bounds.width
     
     @State private var email = ""
     @State private var password = ""
@@ -42,6 +42,7 @@ struct LoginView: View {
                     .modifier(IGTextFieldModifier())
                 }
                 
+                // MARK:- button forgot password
                 Button {
                     print("--------> Show forgot password")
                 } label: {
@@ -53,6 +54,7 @@ struct LoginView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
+                // MARK:- button login
                 Button {
                     print("--------> Login")
                 } label: {
@@ -69,7 +71,7 @@ struct LoginView: View {
                         .padding(.top)
                 }
                 
-                // MARK:- Or divider
+                // MARK:- "Or" divider
                 HStack {
                     Rectangle()
                         .frame(width: screenWidth / 2 - 45, height: 0.5)
@@ -84,6 +86,7 @@ struct LoginView: View {
                 .foregroundColor(Color(UIColor.separator))
                 .padding(.vertical)
                 
+                // MARK:- button continue with facebook
                 Button {
                     print("--------> Continue with Facebook")
                 } label: {
@@ -108,8 +111,8 @@ struct LoginView: View {
                 Divider()
                 
                 // MARK:- Dont have account button
-                Button {
-                    print("--------> Sign Up")
+                NavigationLink {
+                    AddEmailView().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing: 0) {
                         Text("Don't have an account?") +

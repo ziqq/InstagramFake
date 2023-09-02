@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct UserRowView: View {
+    let user: UserDataObject
+    
     var body: some View {
         HStack  {
-            Image("hulk")
+            Image(user.avatar ?? AppConstants.Content.imageStubUser)
                 .resizable()
                 .scaledToFill()
                 .frame(
@@ -20,8 +22,11 @@ struct UserRowView: View {
                 .clipShape(Circle())
             
             VStack(alignment: .leading) {
-                Text("Hulk").fontWeight(.semibold)
-                Text("Bruce Banner")
+                Text(user.userName).fontWeight(.semibold)
+                
+                if let fullName = user.fullName {
+                    Text(fullName).fontWeight(.semibold)
+                }
             }
             .font(.footnote)
             .foregroundColor(.black)
@@ -34,6 +39,6 @@ struct UserRowView: View {
 
 struct UserRowView_Previews: PreviewProvider {
     static var previews: some View {
-        UserRowView()
+        UserRowView(user: MockService.shared.getUsers()[0])
     }
 }

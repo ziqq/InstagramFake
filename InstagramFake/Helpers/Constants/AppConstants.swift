@@ -21,15 +21,22 @@ struct AppConstants {
     struct Content {
         // example: static let Category = "category"
         
-        static let logo: String = "logo-instagram-svg"
-        static let logoFacebook: String = "logo-facebook-svg"
+        static let logo: String = "logo_instagram_svg"
+        static let logoFacebook: String = "logo_facebook_svg"
+        
+        static let imageStubUser: String = "user_photo_stub"
+        static let imageStubPhoto: String = "photo_stub_square"
+        
+        /// This is username text field placeholder
+        /// Text: "Enter your username"
+        static let placeholderUserName: String = "Enter your username"
         
         /// This is email text field placeholder
         /// Text: "Enter your email"
         static let placeholderEmail: String = "Enter your email"
         
         /// This is password text field placeholder
-        /// Text: "Enter your email"
+        /// Text: "Enter your password"
         static let placeholderPassword: String = "Enter your password"
         
         static let dummyText = "Lorem ipsum"
@@ -40,6 +47,9 @@ struct AppConstants {
         struct AvatarSize {
             /// value: 40.0
             static let small: CGFloat = 40.0
+            
+            /// value: 100.0
+            static let medium: CGFloat = 100
         }
         
         struct ButtonSize {
@@ -81,8 +91,8 @@ struct AppConstants {
         struct Image {
             // example: static let icoStar = UIImage(named: "ico_imageName")
             
-            /// This is base logo image file: "logo-instagram-svg"
-            // static let imageLogo: Image = Image("logo-instagram-svg")
+            /// This is base logo image file: "logo_instagram_svg"
+            // static let imageLogo: Image = Image("logo_instagram_svg")
         }
         
         struct Font {
