@@ -10,8 +10,9 @@ import SwiftUI
 struct LoginView: View {
     private let screenWidth = UIScreen.main.bounds.width
     
-    @State private var email = ""
-    @State private var password = ""
+    @StateObject var oo = LoginOO()
+    
+    @State private var loading = false
     
     var body: some View {
         NavigationStack {
@@ -30,14 +31,14 @@ struct LoginView: View {
                 VStack {
                     TextField(
                         AppConstants.Content.placeholderEmail,
-                        text: $email
+                        text: $oo.email
                     )
                     .autocapitalization(.none)
                     .modifier(IGTextFieldModifier())
-                
+                    
                     SecureField(
                         AppConstants.Content.placeholderPassword,
-                        text: $password
+                        text: $oo.password
                     )
                     .modifier(IGTextFieldModifier())
                 }
@@ -56,20 +57,29 @@ struct LoginView: View {
                 
                 // MARK:- button login
                 Button {
-                    print("--------> Login")
+                    Task {
+                        self.loading = true
+                        try await oo.login()
+                        self.loading = false
+                    }
                 } label: {
-                    Text("Login")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .frame(
-                            width: screenWidth - AppConstants.Design.Padding.medium * 2,
-                            height: AppConstants.Design.ButtonSize.base
-                        )
-                        .background(Color(.systemBlue))
-                        .foregroundColor(.white)
-                        .cornerRadius(AppConstants.Design.Corner.base)
-                        .padding(.top)
+                    if self.loading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    } else {
+                        Text("Login")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
                 }
+                .frame(
+                    width: screenWidth - AppConstants.Design.Padding.medium * 2,
+                    height: AppConstants.Design.ButtonSize.base
+                )
+                .foregroundColor(.white)
+                .background(Color(.systemBlue))
+                .cornerRadius(AppConstants.Design.Corner.base)
+                .padding(.top)
                 
                 // MARK:- "Or" divider
                 HStack {
@@ -98,7 +108,7 @@ struct LoginView: View {
                                 width: AppConstants.Design.IconSize.base,
                                 height: AppConstants.Design.IconSize.base
                             )
-                            
+                        
                         Text("Continue with Facebook")
                             .font(.subheadline)
                             .fontWeight(.semibold)

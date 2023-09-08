@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddEmailView: View {
     @Environment (\.dismiss) var dismiss
+    @EnvironmentObject var oo: AuthOO
     
     private let screenWidth = UIScreen.main.bounds.width
     
@@ -30,7 +31,7 @@ struct AddEmailView: View {
                 // MARK:- email field
                 TextField(
                     AppConstants.Content.placeholderEmail,
-                    text: $email
+                    text: $oo.email
                 )
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
@@ -70,6 +71,6 @@ struct AddEmailView: View {
 
 struct AddEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEmailView()
+        AddEmailView().environmentObject(AuthOO())
     }
 }

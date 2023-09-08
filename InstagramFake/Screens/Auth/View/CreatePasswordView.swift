@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreatePasswordView: View {
     @Environment (\.dismiss) var dismiss
+    @EnvironmentObject var oo: AuthOO
     
     private let screenWidth = UIScreen.main.bounds.width
     
@@ -30,7 +31,7 @@ struct CreatePasswordView: View {
             // MARK:- email field
             TextField(
                 AppConstants.Content.placeholderPassword,
-                text: $password
+                text: $oo.password
             )
             .modifier(IGTextFieldModifier())
             .padding(.top)
@@ -69,6 +70,6 @@ struct CreatePasswordView: View {
 
 struct CreatePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePasswordView()
+        CreatePasswordView().environmentObject(AuthOO())
     }
 }

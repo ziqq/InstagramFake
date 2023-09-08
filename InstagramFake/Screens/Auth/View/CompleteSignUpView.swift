@@ -9,12 +9,13 @@ import SwiftUI
 
 struct CompleteSignUpView: View {
     @Environment (\.dismiss) var dismiss
+    @EnvironmentObject var oo: AuthOO
     
     private let screenWidth = UIScreen.main.bounds.width
     
     var body: some View {
         VStack(spacing: AppConstants.Design.Padding.small) {
-            Text("Welcome to Instagram, your nickname")
+            Text("Welcome to Instagram,\nyour \(oo.username)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -27,7 +28,7 @@ struct CompleteSignUpView: View {
             
             // MARK:- button
             Button {
-                print("--------> Complete Sing Up")
+                Task { try await oo.createUser() }
             } label: {
                 Text("Complete Sing Up")
                     .font(.subheadline)
@@ -57,6 +58,6 @@ struct CompleteSignUpView: View {
 
 struct CompleteSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteSignUpView()
+        CompleteSignUpView().environmentObject(AuthOO())
     }
 }

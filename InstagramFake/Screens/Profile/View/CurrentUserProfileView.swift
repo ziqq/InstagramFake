@@ -30,7 +30,7 @@ struct CurrentUserProfileView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         lightImpact.impactOccurred()
-                        print("--------> Pressed")
+                        AuthService.shared.signOut()
                     } label: {
                         Image(systemName: "line.3.horizontal")
                             .foregroundColor(.black)

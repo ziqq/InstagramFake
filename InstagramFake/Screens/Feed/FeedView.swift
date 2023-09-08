@@ -28,7 +28,7 @@ struct FeedView: View {
                         lightImpact.impactOccurred()
                         print("--------> Pressed on logo")
                     } label: {
-                        Image("logo-instagram-svg")
+                        Image(AppConstants.Content.logo)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 100, height: 32)

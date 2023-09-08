@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreateUserNameView: View {
     @Environment (\.dismiss) var dismiss
+    @EnvironmentObject var oo: AuthOO
     
     private let screenWidth = UIScreen.main.bounds.width
     
@@ -30,7 +31,7 @@ struct CreateUserNameView: View {
             // MARK:- email field
             TextField(
                 AppConstants.Content.placeholderUserName,
-                text: $username
+                text: $oo.username
             )
             .autocapitalization(.none)
             .modifier(IGTextFieldModifier())
@@ -70,6 +71,6 @@ struct CreateUserNameView: View {
 
 struct CreateUserNameView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateUserNameView()
+        CreateUserNameView().environmentObject(AuthOO())
     }
 }
