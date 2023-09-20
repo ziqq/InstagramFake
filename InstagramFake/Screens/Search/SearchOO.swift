@@ -15,7 +15,7 @@ class SearchOO: ObservableObject {
         Task { try await fetchAllUsers() }
     }
     
-    func fetchAllUsers() async throws {
+    @MainActor func fetchAllUsers() async throws {
         self.data = try await UserService.fetchAllUsers()
     }
 }

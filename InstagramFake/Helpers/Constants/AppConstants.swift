@@ -56,8 +56,11 @@ struct AppConstants {
             /// Base button size: 44.0
             static let base: CGFloat = 44.0
             
-            /// Small button size: 40.0
+            /// Small button size: 38.0
             static let small: CGFloat = 38.0
+            
+            /// Extra small button size: 32.0
+            static let extraSmall: CGFloat = 32.0
         }
         
         struct IconSize {

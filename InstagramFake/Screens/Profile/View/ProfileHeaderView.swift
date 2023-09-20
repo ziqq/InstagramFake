@@ -44,19 +44,28 @@ struct ProfileHeaderView: View {
             .padding(.horizontal)
             
             Button {
-                print("Edit Profile")
-                AuthService.shared.signOut()
+                if user.isCurrentUser {
+                    print("[DEBUG]: Edit Profile")
+                } else {
+                    print("[DEBUG]: Follow...")
+                }
             } label: {
-                Text("Edit Profile")
+                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .frame(width: 360, height: 32)
-                    .foregroundColor(.black)
+                    .frame(width: 360, height: AppConstants.Design.ButtonSize.extraSmall)
+                    .background(user.isCurrentUser ? .white : Color(.systemBlue))
+                    .foregroundColor(user.isCurrentUser ? .black : .white)
+                    .cornerRadius(AppConstants.Design.Corner.small)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color.gray, lineWidth: 1)
+                        RoundedRectangle(
+                            cornerRadius: AppConstants.Design.Corner.small
+                        )
+                        .stroke(
+                            user.isCurrentUser ? Color.gray : .clear,
+                            lineWidth: 1
+                        )
                     )
-                
             }
             .padding(.bottom, AppConstants.Design.Padding.small)
             .padding(.top, AppConstants.Design.Padding.extraSmall)

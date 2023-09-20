@@ -59,16 +59,9 @@ struct CurrentUserProfileView: View {
                         print("[DEBUG]: Click on logout")
                         AuthService.shared.signOut()
                     }
-                    Button {
-                        print("[DEBUG]: Click on logout button")
-                        AuthService.shared.signOut()
-                    } label: {
-                        Text("Logout")
-                    }
                 }
-                .disabled(true)
                 .presentationDragIndicator(.visible)
-                .presentationDetents([.fraction(0.65)])
+                .presentationDetents([.fraction(0.62)])
             }
         }
     }
