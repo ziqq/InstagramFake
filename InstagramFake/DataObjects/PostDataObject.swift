@@ -18,8 +18,16 @@ struct PostDataObject : Identifiable, Hashable, Codable {
     
 }
 
-extension PostDataObject {
-    static func mock() -> PostDataObject {
-        return PostDataObject(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "iron_man", timeStamp: Date.now, likes: 32, user: MockService.shared.getUser());
-    }
-}
+//extension PostDataObject {
+//    static func mock() -> PostDataObject {
+//        return PostDataObject(
+//            id: NSUUID().uuidString,
+//            ownerUid: NSUUID().uuidString,
+//            capton: "This is caption",
+//            imageUrl: "iron_man",
+//            timeStamp: Date.now,
+//            likes: 32,
+//            user: MockService.shared.getUser()
+//        );
+//    }
+//}

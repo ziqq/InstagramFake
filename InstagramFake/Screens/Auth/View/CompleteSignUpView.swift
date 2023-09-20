@@ -15,7 +15,7 @@ struct CompleteSignUpView: View {
     
     var body: some View {
         VStack(spacing: AppConstants.Design.Padding.small) {
-            Text("Welcome to Instagram,\nyour \(oo.username)")
+            Text("Welcome to Instagram,\nyour \(oo.userName)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)

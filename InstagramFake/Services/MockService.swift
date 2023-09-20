@@ -42,21 +42,100 @@ class MockService {
     
     
     func getPost() -> PostDataObject {
-        return PostDataObject(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "iron_man", timeStamp: Date.now, likes: 32, user: getUser());
+        return PostDataObject(
+            id: NSUUID().uuidString,
+            ownerUid: NSUUID().uuidString,
+            capton: "This is caption",
+            imageUrl: "iron_man",
+            timeStamp: Date(timeIntervalSinceNow: 30 * 7 * 24 * 60),
+            likes: 32, user: getUser()
+        );
     }
     
     
     func getPosts() -> [PostDataObject] {
         return [
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "iron_man", timeStamp: Date.now, likes: 32, user: getUsers()[0]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is some test caption for now, this is long string of strings", imageUrl: "black_widow", timeStamp: Date.now, likes: 32, user: getUsers()[0]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "cap_america", timeStamp: Date.now, likes: 32, user: getUsers()[0]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is some test caption for now, this is long string of strings", imageUrl: "cap_marvel", timeStamp: Date.now, likes: 32, user: getUsers()[1]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "enot", timeStamp: Date.now, likes: 32, user: getUsers()[1]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is some test caption for now, this is long string of strings", imageUrl: "hulk", timeStamp: Date.now, likes: 32, user: getUsers()[1]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "murovey", timeStamp: Date.now, likes: 32, user: getUsers()[2]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is some test caption for now, this is long string of strings", imageUrl: "socol_eye", timeStamp: Date.now, likes: 32, user: getUsers()[3]),
-            .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, capton: "This is caption", imageUrl: "tor", timeStamp: Date.now, likes: 32, user: getUsers()[4])
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption",
+                imageUrl: "iron_man",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[0]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is some test caption for now, this is long string of strings",
+                imageUrl: "black_widow",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[0]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption",
+                imageUrl: "cap_america",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[0]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is some test caption for now, this is long string of strings",
+                imageUrl: "cap_marvel",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[1]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption",
+                imageUrl: "enot",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[1]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is some test caption for now, this is long string of strings",
+                imageUrl: "hulk",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[1]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption",
+                imageUrl: "murovey",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[2]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is some test caption for now, this is long string of strings",
+                imageUrl: "socol_eye",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[3]
+            ),
+            .init(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption",
+                imageUrl: "tor",
+                timeStamp: Date.now,
+                likes: 32,
+                user: getUsers()[4]
+            )
         ];
     }
 }

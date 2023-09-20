@@ -10,13 +10,13 @@ import Foundation
 class AuthOO: ObservableObject {
     @Published var email = ""
     @Published var password = ""
-    @Published var username = ""
+    @Published var userName = ""
     
     func createUser() async throws {
         try await AuthService.shared.createUser(
             email: email,
             password: password,
-            username: username
+            userName: userName
         )
     }
 }

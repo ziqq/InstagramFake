@@ -34,6 +34,7 @@ struct FeedView: View {
                             .frame(width: 100, height: 32)
                             .foregroundColor(.black)
                     }
+                    .padding(.leading, AppConstants.Design.Padding.extraSmall / 2)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {

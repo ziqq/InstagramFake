@@ -17,8 +17,15 @@ struct UserDataObject : Identifiable, Hashable, Codable {
     
 }
 
-extension UserDataObject {
-    static func mock() -> UserDataObject {
-        return UserDataObject(id: NSUUID().uuidString, email: "ironman@gmail.com", bio: "I'm bellionere", avatar: "iron_man", fullName: "Tony Stark", userName: "iron_man");
-    }
-}
+//extension UserDataObject {
+//    static func mock() -> UserDataObject {
+//        return UserDataObject(
+//            id: NSUUID().uuidString,
+//            email: "ironman@gmail.com",
+//            bio: "I'm bellionere",
+//            avatar: "iron_man",
+//            fullName: "Tony Stark",
+//            userName: "iron_man"
+//        );
+//    }
+//}

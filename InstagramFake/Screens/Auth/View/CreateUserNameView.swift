@@ -31,7 +31,7 @@ struct CreateUserNameView: View {
             // MARK:- email field
             TextField(
                 AppConstants.Content.placeholderUserName,
-                text: $oo.username
+                text: $oo.userName
             )
             .autocapitalization(.none)
             .modifier(IGTextFieldModifier())

@@ -64,6 +64,9 @@ struct AppConstants {
             /// Base icon size: 24.0
             static let base: CGFloat = 24.0
             
+            /// Base icon size: 18.0
+            static let small: CGFloat = 18.0
+            
             /// Small icon size: 32.0
             static let medium: CGFloat = 32.0
         }

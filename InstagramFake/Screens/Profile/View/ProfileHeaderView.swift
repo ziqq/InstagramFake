@@ -43,6 +43,7 @@ struct ProfileHeaderView: View {
             
             Button {
                 print("Edit Profile")
+                AuthService.shared.signOut()
             } label: {
                 Text("Edit Profile")
                     .font(.subheadline)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */; };
 		50CBF1C32A9E3DD000655373 /* InstagramFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */; };
 		50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C42A9E3DD000655373 /* ContentView.swift */; };
 		50CBF1C72A9E3DD100655373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF1C62A9E3DD100655373 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRowWithIcon.swift; sourceTree = "<group>"; };
 		50CBF1BF2A9E3DD000655373 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFakeApp.swift; sourceTree = "<group>"; };
 		50CBF1C42A9E3DD000655373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */,
 				50CBF20E2A9F3E8F00655373 /* UserRowView.swift */,
 				50CBF22B2AA0DA0D00655373 /* PostGridView.swift */,
+				5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				50CBF2182AA0883600655373 /* CreateUserNameView.swift in Sources */,
 				50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */,
 				50CBF21E2AA08BF500655373 /* UserDataObject.swift in Sources */,
+				5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */,
 				50CBF2092A9F3A6200655373 /* AppConstants.swift in Sources */,
 				50CBF22C2AA0DA0D00655373 /* PostGridView.swift in Sources */,
 				50CBF1F92A9E3FB400655373 /* PersonRowView.swift in Sources */,

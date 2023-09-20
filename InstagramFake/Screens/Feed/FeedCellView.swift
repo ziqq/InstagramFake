@@ -12,7 +12,7 @@ struct FeedCellView: View {
     
     var body: some View {
         VStack {
-            // MARK:- image + username
+            // MARK: - image + username
             HStack  {
                 Image(post.user.avatar ?? AppConstants.Content.imageStubUser)
                     .resizable()
@@ -26,9 +26,9 @@ struct FeedCellView: View {
                 
                 Spacer()
             }
-            .padding(.leading)
+            .padding(.leading, AppConstants.Design.Padding.base)
             
-            // MARK:- post image
+            // MARK: - post image
             Image(post.imageUrl)
                 .resizable()
                 .scaledToFill()
@@ -36,8 +36,8 @@ struct FeedCellView: View {
                 .clipShape(Rectangle())
             
             
-            // MARK:- action buttons
-            HStack(spacing: 8) {
+            // MARK: - action buttons
+            HStack(spacing: AppConstants.Design.Padding.base / 2) {
                 Button {
                     print("--------> Like post")
                 } label: {
@@ -59,33 +59,42 @@ struct FeedCellView: View {
                 Spacer()
             }
             .foregroundColor(.black)
-            .padding(.horizontal, 8)
+            .padding(.horizontal, AppConstants.Design.Padding.base / 1.5)
             .padding(.top, 2)
             
-            // MARK:- likes label
-            Text("\(post.likes)")
+            // MARK: - likes label
+            Text("\(post.likes) likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 10)
+                .padding(.leading, AppConstants.Design.Padding.base)
                 .padding(.top, 1)
             
-            // MARK:- caption label
+            // MARK: - caption label
             HStack {
                 Text("\(post.user.userName) ").fontWeight(.semibold) +
                 Text("\(post.capton)")
             }
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 10)
+            .padding(.leading, AppConstants.Design.Padding.base)
             .padding(.top, 1)
             
-            // MARK:- time stamp 6h ago
+            // MARK: - time stamp 5h ago
             Text("\(post.timeStamp)")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 10)
+                .padding(.leading, AppConstants.Design.Padding.base)
+                .padding(.top, 1)
+                .foregroundColor(.gray)
+            
+            // MARK: - time stamp 5h ago
+            Text("\(post.timeStamp.dayOrHour() ?? "") ago")
+                .font(.footnote)
+                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, AppConstants.Design.Padding.base)
                 .padding(.top, 1)
                 .foregroundColor(.gray)
         }
