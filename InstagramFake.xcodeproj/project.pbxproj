@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */; };
+		5023E19B2ABB0EBD0064D113 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023E19A2ABB0EBD0064D113 /* UserService.swift */; };
 		50CBF1C32A9E3DD000655373 /* InstagramFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */; };
 		50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C42A9E3DD000655373 /* ContentView.swift */; };
 		50CBF1C72A9E3DD100655373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF1C62A9E3DD100655373 /* Assets.xcassets */; };
 		50CBF1CB2A9E3DD100655373 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF1CA2A9E3DD100655373 /* Preview Assets.xcassets */; };
-		50CBF1EB2A9E3F7A00655373 /* PersonalDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1EA2A9E3F7A00655373 /* PersonalDataObject.swift */; };
 		50CBF1F72A9E3FB400655373 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1F12A9E3FB400655373 /* SearchView.swift */; };
-		50CBF1F82A9E3FB400655373 /* SearchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1F22A9E3FB400655373 /* SearchObservableObject.swift */; };
-		50CBF1F92A9E3FB400655373 /* PersonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1F42A9E3FB400655373 /* PersonRowView.swift */; };
+		50CBF1F82A9E3FB400655373 /* SearchOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1F22A9E3FB400655373 /* SearchOO.swift */; };
 		50CBF1FC2A9E3FEF00655373 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1FB2A9E3FEF00655373 /* MockService.swift */; };
 		50CBF1FE2A9E41BB00655373 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1FD2A9E41BB00655373 /* ProfileView.swift */; };
 		50CBF2002A9E4A8C00655373 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */; };
@@ -53,16 +52,15 @@
 
 /* Begin PBXFileReference section */
 		5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRowWithIcon.swift; sourceTree = "<group>"; };
+		5023E19A2ABB0EBD0064D113 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		50CBF1BF2A9E3DD000655373 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramFake.app; path = /Users/ziqq/Desktop/git/ziqq/Swift/InstagramFake/build/Debug/InstagramFake.app; sourceTree = "<absolute>"; };
 		50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFakeApp.swift; sourceTree = "<group>"; };
 		50CBF1C42A9E3DD000655373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50CBF1C62A9E3DD100655373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50CBF1C82A9E3DD100655373 /* InstagramFake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramFake.entitlements; sourceTree = "<group>"; };
 		50CBF1CA2A9E3DD100655373 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		50CBF1EA2A9E3F7A00655373 /* PersonalDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDataObject.swift; sourceTree = "<group>"; };
 		50CBF1F12A9E3FB400655373 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		50CBF1F22A9E3FB400655373 /* SearchObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchObservableObject.swift; sourceTree = "<group>"; };
-		50CBF1F42A9E3FB400655373 /* PersonRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRowView.swift; sourceTree = "<group>"; };
+		50CBF1F22A9E3FB400655373 /* SearchOO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchOO.swift; sourceTree = "<group>"; };
 		50CBF1FB2A9E3FEF00655373 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		50CBF1FD2A9E41BB00655373 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		50CBF1E22A9E3ED100655373 /* DataObjects */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF1EA2A9E3F7A00655373 /* PersonalDataObject.swift */,
 				50CBF2232AA09DE900655373 /* PostDataObject.swift */,
 				50CBF21D2AA08BF400655373 /* UserDataObject.swift */,
 			);
@@ -179,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBF1F12A9E3FB400655373 /* SearchView.swift */,
-				50CBF1F22A9E3FB400655373 /* SearchObservableObject.swift */,
+				50CBF1F22A9E3FB400655373 /* SearchOO.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -187,11 +184,10 @@
 		50CBF1F32A9E3FB400655373 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF1F42A9E3FB400655373 /* PersonRowView.swift */,
-				50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */,
-				50CBF20E2A9F3E8F00655373 /* UserRowView.swift */,
 				50CBF22B2AA0DA0D00655373 /* PostGridView.swift */,
 				5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */,
+				50CBF20E2A9F3E8F00655373 /* UserRowView.swift */,
+				50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -218,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBF1FB2A9E3FEF00655373 /* MockService.swift */,
+				5023E19A2ABB0EBD0064D113 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -416,15 +413,15 @@
 				50CBF21C2AA08A8F00655373 /* CompleteSignUpView.swift in Sources */,
 				50CBF2242AA09DE900655373 /* PostDataObject.swift in Sources */,
 				50CBF2202AA09A5600655373 /* CurrentUserProfileView.swift in Sources */,
+				5023E19B2ABB0EBD0064D113 /* UserService.swift in Sources */,
 				50CBF22A2AA0D9A300655373 /* ProfileHeaderView.swift in Sources */,
-				50CBF1EB2A9E3F7A00655373 /* PersonalDataObject.swift in Sources */,
 				50CBF2282AA0D6A500655373 /* ProfileOO.swift in Sources */,
 				50CBF2342AA0F49300655373 /* UploadPostOO.swift in Sources */,
 				50CBF2062A9F394800655373 /* GlobalConstant.swift in Sources */,
 				50CBF1FC2A9E3FEF00655373 /* MockService.swift in Sources */,
 				50CBF2302AA0EB5600655373 /* UploadPostView.swift in Sources */,
 				50CBF2142A9F487B00655373 /* IGTextFieldModifier.swift in Sources */,
-				50CBF1F82A9E3FB400655373 /* SearchObservableObject.swift in Sources */,
+				50CBF1F82A9E3FB400655373 /* SearchOO.swift in Sources */,
 				50CBF24F2AA7659400655373 /* LoginOO.swift in Sources */,
 				50CBF2182AA0883600655373 /* CreateUserNameView.swift in Sources */,
 				50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */,
@@ -432,7 +429,6 @@
 				5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */,
 				50CBF2092A9F3A6200655373 /* AppConstants.swift in Sources */,
 				50CBF22C2AA0DA0D00655373 /* PostGridView.swift in Sources */,
-				50CBF1F92A9E3FB400655373 /* PersonRowView.swift in Sources */,
 				50CBF2162AA0833E00655373 /* AddEmailView.swift in Sources */,
 				50CBF21A2AA0899F00655373 /* CreatePasswordView.swift in Sources */,
 				50CBF2112A9F417E00655373 /* LoginView.swift in Sources */,
