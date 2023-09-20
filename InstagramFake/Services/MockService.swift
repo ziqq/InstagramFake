@@ -20,7 +20,14 @@ class MockService {
     
     /// Return UserDataObject
     func getUser() -> UserDataObject {
-        .init(id: NSUUID().uuidString, email: "ironman@gmail.com", bio: "I'm bellionere", avatar: "iron_man", fullName: "Tony Stark", userName: "iron_man")
+        .init(
+            id: NSUUID().uuidString,
+            email: "ironman@gmail.com",
+            bio: "I'm bellionere",
+            avatar: "iron_man",
+            fullName: "Tony Stark",
+            userName: "iron_man"
+        )
     }
     
     /// Return [UserDataObject]
@@ -71,7 +78,7 @@ class MockService {
                 imageUrl: "black_widow",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[0]
+                user: getUsers()[1]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -80,7 +87,7 @@ class MockService {
                 imageUrl: "cap_america",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[0]
+                user: getUsers()[2]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -89,7 +96,7 @@ class MockService {
                 imageUrl: "cap_marvel",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[1]
+                user: getUsers()[3]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -98,7 +105,7 @@ class MockService {
                 imageUrl: "enot",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[1]
+                user: getUsers()[4]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -107,7 +114,7 @@ class MockService {
                 imageUrl: "hulk",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[1]
+                user: getUsers()[5]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -116,7 +123,7 @@ class MockService {
                 imageUrl: "murovey",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[2]
+                user: getUsers()[6]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -125,7 +132,7 @@ class MockService {
                 imageUrl: "socol_eye",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[3]
+                user: getUsers()[7]
             ),
             .init(
                 id: NSUUID().uuidString,
@@ -134,7 +141,7 @@ class MockService {
                 imageUrl: "tor",
                 timeStamp: Date.now,
                 likes: 32,
-                user: getUsers()[4]
+                user: getUsers()[8]
             )
         ];
     }

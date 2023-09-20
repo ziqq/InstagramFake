@@ -22,21 +22,20 @@ class AuthService {
         Task { try await loadUserData() }
     }
     
-    @MainActor
-    func login(withEmail email: String, password: String) async throws {
+    @MainActor func login(withEmail email: String, password: String) async throws {
         print("[DEBUG]: AuthService | login | email: \(email)")
         print("[DEBUG]: AuthService | login | password: \(password)")
         
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
+            try await loadUserData()
         } catch {
             print("[DEBUG]: AuthService | login | Failed to login with error \(error.localizedDescription)")
         }
     }
     
-    @MainActor
-    func createUser(email: String, password: String, userName: String) async throws {
+    @MainActor func createUser(email: String, password: String, userName: String) async throws {
         print("[DEBUG]: AuthService | createUser | email: \(email)")
         print("[DEBUG]: AuthService | createUser | password: \(password)")
         print("[DEBUG]: AuthService | createUser | username: \(userName)")
@@ -53,7 +52,7 @@ class AuthService {
         }
     }
     
-    func loadUserData() async throws {
+    @MainActor func loadUserData() async throws {
         self.userSession = Auth.auth().currentUser
         guard let currentUid = userSession?.uid else { return }
         let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument()
@@ -64,11 +63,14 @@ class AuthService {
     func signOut() {
         print("[DEBUG]: AuthService | signOut")
         try? Auth.auth().signOut()
+        self.currentUser = nil
         self.userSession = nil
     }
     
     private func uploadUserData(uid: String, email: String, userName: String) async {
         let user = UserDataObject(id: uid, email: email, userName: userName)
+        self.currentUser = user
+        
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try? await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
         print("[DEBUG]: AuthService | uploadUserData | Document successfully written!")

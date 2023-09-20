@@ -19,7 +19,7 @@ struct LoginView: View {
             VStack {
                 Spacer()
                 
-                // MARK:- logo
+                // MARK: - logo
                 Image(AppConstants.Content.logo)
                     .resizable()
                     .scaledToFill()
@@ -27,7 +27,7 @@ struct LoginView: View {
                     .padding(.bottom)
                 
                 
-                // MARK:- text fields
+                // MARK: - text fields
                 VStack {
                     TextField(
                         AppConstants.Content.placeholderEmail,
@@ -43,7 +43,7 @@ struct LoginView: View {
                     .modifier(IGTextFieldModifier())
                 }
                 
-                // MARK:- button forgot password
+                // MARK: - button forgot password
                 Button {
                     print("--------> Show forgot password")
                 } label: {
@@ -55,7 +55,7 @@ struct LoginView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
-                // MARK:- button login
+                // MARK: - button login
                 Button {
                     Task {
                         self.loading = true

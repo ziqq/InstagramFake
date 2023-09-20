@@ -42,7 +42,6 @@
 		50CBF2342AA0F49300655373 /* UploadPostOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2332AA0F49300655373 /* UploadPostOO.swift */; };
 		50CBF2372AA38E3E00655373 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF2362AA38E3E00655373 /* GoogleService-Info.plist */; };
 		50CBF23A2AA38F0500655373 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 50CBF2392AA38F0500655373 /* FirebaseAuth */; };
-		50CBF23C2AA38F0500655373 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 50CBF23B2AA38F0500655373 /* FirebaseFirestore */; };
 		50CBF23E2AA38F0500655373 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 50CBF23D2AA38F0500655373 /* FirebaseFirestoreSwift */; };
 		50CBF2402AA38F0500655373 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 50CBF23F2AA38F0500655373 /* FirebaseStorage */; };
 		50CBF2442AA3917400655373 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2432AA3917400655373 /* AuthService.swift */; };
@@ -54,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRowWithIcon.swift; sourceTree = "<group>"; };
-		50CBF1BF2A9E3DD000655373 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CBF1BF2A9E3DD000655373 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramFake.app; path = /Users/ziqq/Desktop/git/ziqq/Swift/InstagramFake/build/Debug/InstagramFake.app; sourceTree = "<absolute>"; };
 		50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFakeApp.swift; sourceTree = "<group>"; };
 		50CBF1C42A9E3DD000655373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50CBF1C62A9E3DD100655373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 			files = (
 				50CBF23A2AA38F0500655373 /* FirebaseAuth in Frameworks */,
 				50CBF2402AA38F0500655373 /* FirebaseStorage in Frameworks */,
-				50CBF23C2AA38F0500655373 /* FirebaseFirestore in Frameworks */,
 				50CBF23E2AA38F0500655373 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,16 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBF1C12A9E3DD000655373 /* InstagramFake */,
-				50CBF1C02A9E3DD000655373 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		50CBF1C02A9E3DD000655373 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				50CBF1BF2A9E3DD000655373 /* InstagramFake.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		50CBF1C12A9E3DD000655373 /* InstagramFake */ = {
@@ -273,8 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				50CBF1FD2A9E41BB00655373 /* ProfileView.swift */,
-				50CBF21F2AA09A5600655373 /* CurrentUserProfileView.swift */,
 				50CBF2292AA0D9A300655373 /* ProfileHeaderView.swift */,
+				50CBF21F2AA09A5600655373 /* CurrentUserProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,7 +341,6 @@
 			name = InstagramFake;
 			packageProductDependencies = (
 				50CBF2392AA38F0500655373 /* FirebaseAuth */,
-				50CBF23B2AA38F0500655373 /* FirebaseFirestore */,
 				50CBF23D2AA38F0500655373 /* FirebaseFirestoreSwift */,
 				50CBF23F2AA38F0500655373 /* FirebaseStorage */,
 			);
@@ -387,7 +375,7 @@
 			packageReferences = (
 				50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
-			productRefGroup = 50CBF1C02A9E3DD000655373 /* Products */;
+			productRefGroup = 50CBF1B62A9E3DD000655373;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -680,11 +668,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		50CBF23B2AA38F0500655373 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
 		};
 		50CBF23D2AA38F0500655373 /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;

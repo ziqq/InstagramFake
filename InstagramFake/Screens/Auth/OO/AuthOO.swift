@@ -18,5 +18,9 @@ class AuthOO: ObservableObject {
             password: password,
             userName: userName
         )
+        
+        email = ""
+        password = ""
+        userName = ""
     }
 }

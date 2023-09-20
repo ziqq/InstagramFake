@@ -13,6 +13,8 @@ struct CompleteSignUpView: View {
     
     private let screenWidth = UIScreen.main.bounds.width
     
+    @State private var loading = false
+    
     var body: some View {
         VStack(spacing: AppConstants.Design.Padding.small) {
             Text("Welcome to Instagram,\nyour \(oo.userName)")
@@ -26,24 +28,34 @@ struct CompleteSignUpView: View {
                 .foregroundColor(Color(.secondaryLabel))
                 .padding(.horizontal, AppConstants.Design.Padding.medium)
             
-            // MARK:- button
+            // MARK: - button
             Button {
-                Task { try await oo.createUser() }
+                Task {
+                    self.loading = true
+                    try await oo.createUser()
+                    self.loading = false
+                }
             } label: {
-                Text("Complete Sing Up")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(
-                        width: screenWidth - AppConstants.Design.Padding.medium * 2,
-                        height: AppConstants.Design.ButtonSize.base
-                    )
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(AppConstants.Design.Corner.base)
-                    .padding(.top)
+                if self.loading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                } else {
+                    Text("Complete Sing Up")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                }
             }
+            .frame(
+                width: screenWidth - AppConstants.Design.Padding.medium * 2,
+                height: AppConstants.Design.ButtonSize.base
+            )
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .cornerRadius(AppConstants.Design.Corner.base)
+            .padding(.top)
         }
         .padding(.top, AppConstants.Design.Padding.medium)
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Image(systemName: "chevron.left")

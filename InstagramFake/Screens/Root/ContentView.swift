@@ -15,8 +15,8 @@ struct ContentView: View {
         Group {
             if contentOO.userSession == nil {
                 LoginView().environmentObject(authOO)
-            } else {
-                MainView()
+            } else if let currentUser = contentOO.currentUser {
+                MainView(user: currentUser)
             }
         }
     }

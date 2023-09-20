@@ -36,6 +36,8 @@ struct ProfileHeaderView: View {
                 if let bio = user.bio {
                     Text(bio)
                 }
+                
+                Text(user.userName)
             }
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
