@@ -9,10 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
     private let screenWidth = UIScreen.main.bounds.width
+    private let softImpact = UIImpactFeedbackGenerator(style: .soft)
     
     @StateObject var oo = LoginOO()
-    
-    @State private var loading = false
     
     var body: some View {
         NavigationStack {
@@ -58,12 +57,14 @@ struct LoginView: View {
                 // MARK: - button login
                 Button {
                     Task {
-                        self.loading = true
-                        try await oo.login()
-                        self.loading = false
+                        do {
+                            try await oo.login()
+                        } catch {
+                            softImpact.impactOccurred()
+                        }
                     }
                 } label: {
-                    if self.loading {
+                    if oo.loading {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     } else {
@@ -131,6 +132,12 @@ struct LoginView: View {
                     .font(.subheadline)
                 }
                 .padding(.vertical)
+            }.alert(isPresented: $oo.showAlert) {
+                Alert(
+                    title: Text("Ошибка"),
+                    message: Text(oo.errorMessage),
+                    dismissButton: .default(Text("OK"))
+                )
             }
         }
     }

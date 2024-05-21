@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */; };
 		5023E19B2ABB0EBD0064D113 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023E19A2ABB0EBD0064D113 /* UserService.swift */; };
+		503EE8BE2BF5FE830002A275 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503EE8BD2BF5FE830002A275 /* AuthEndpoint.swift */; };
+		503EE8C02BF5FEC70002A275 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503EE8BF2BF5FEC70002A275 /* APIService.swift */; };
+		503EE8C22BF5FED80002A275 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503EE8C12BF5FED80002A275 /* APIServiceProtocol.swift */; };
+		503EE92D2BF783D20002A275 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 503EE92C2BF783D20002A275 /* FirebaseFirestore */; };
+		503EE92F2BF783D20002A275 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 503EE92E2BF783D20002A275 /* FirebaseFirestoreCombine-Community */; };
 		50CBF1C32A9E3DD000655373 /* InstagramFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */; };
 		50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C42A9E3DD000655373 /* ContentView.swift */; };
 		50CBF1C72A9E3DD100655373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF1C62A9E3DD100655373 /* Assets.xcassets */; };
@@ -30,9 +35,9 @@
 		50CBF2182AA0883600655373 /* CreateUserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2172AA0883600655373 /* CreateUserNameView.swift */; };
 		50CBF21A2AA0899F00655373 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2192AA0899F00655373 /* CreatePasswordView.swift */; };
 		50CBF21C2AA08A8F00655373 /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF21B2AA08A8F00655373 /* CompleteSignUpView.swift */; };
-		50CBF21E2AA08BF500655373 /* UserDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF21D2AA08BF400655373 /* UserDataObject.swift */; };
+		50CBF21E2AA08BF500655373 /* UserDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF21D2AA08BF400655373 /* UserDO.swift */; };
 		50CBF2202AA09A5600655373 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF21F2AA09A5600655373 /* CurrentUserProfileView.swift */; };
-		50CBF2242AA09DE900655373 /* PostDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2232AA09DE900655373 /* PostDataObject.swift */; };
+		50CBF2242AA09DE900655373 /* PostDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2232AA09DE900655373 /* PostDO.swift */; };
 		50CBF2262AA0D54700655373 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2252AA0D54700655373 /* DateExtension.swift */; };
 		50CBF2282AA0D6A500655373 /* ProfileOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2272AA0D6A500655373 /* ProfileOO.swift */; };
 		50CBF22A2AA0D9A300655373 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF2292AA0D9A300655373 /* ProfileHeaderView.swift */; };
@@ -53,7 +58,12 @@
 /* Begin PBXFileReference section */
 		5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRowWithIcon.swift; sourceTree = "<group>"; };
 		5023E19A2ABB0EBD0064D113 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		50CBF1BF2A9E3DD000655373 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramFake.app; path = /Users/ziqq/Desktop/git/ziqq/Swift/InstagramFake/build/Debug/InstagramFake.app; sourceTree = "<absolute>"; };
+		503EE8B72BEBF2860002A275 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramFake.app; path = /Users/ziqq/Desktop/git/ziqq/InstagramFake/build/Debug/InstagramFake.app; sourceTree = "<absolute>"; };
+		503EE8BD2BF5FE830002A275 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		503EE8BF2BF5FEC70002A275 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		503EE8C12BF5FED80002A275 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		5091E6062BFC9372005690FB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		5091E6072BFC93C9005690FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFakeApp.swift; sourceTree = "<group>"; };
 		50CBF1C42A9E3DD000655373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50CBF1C62A9E3DD100655373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,9 +86,9 @@
 		50CBF2172AA0883600655373 /* CreateUserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserNameView.swift; sourceTree = "<group>"; };
 		50CBF2192AA0899F00655373 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		50CBF21B2AA08A8F00655373 /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
-		50CBF21D2AA08BF400655373 /* UserDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataObject.swift; sourceTree = "<group>"; };
+		50CBF21D2AA08BF400655373 /* UserDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDO.swift; sourceTree = "<group>"; };
 		50CBF21F2AA09A5600655373 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
-		50CBF2232AA09DE900655373 /* PostDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataObject.swift; sourceTree = "<group>"; };
+		50CBF2232AA09DE900655373 /* PostDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDO.swift; sourceTree = "<group>"; };
 		50CBF2252AA0D54700655373 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		50CBF2272AA0D6A500655373 /* ProfileOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOO.swift; sourceTree = "<group>"; };
 		50CBF2292AA0D9A300655373 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -99,7 +109,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CBF23A2AA38F0500655373 /* FirebaseAuth in Frameworks */,
+				503EE92D2BF783D20002A275 /* FirebaseFirestore in Frameworks */,
 				50CBF2402AA38F0500655373 /* FirebaseStorage in Frameworks */,
+				503EE92F2BF783D20002A275 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				50CBF23E2AA38F0500655373 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,25 +119,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503EE8B82BEBF3990002A275 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				50CBF20A2A9F3B3E00655373 /* Constants */,
+				50CBF1E22A9E3ED100655373 /* DataObjects */,
+				50CBF20B2A9F3B6800655373 /* Extensions */,
+				50CBF2122A9F484E00655373 /* Modifiers */,
+				50CBF1FA2A9E3FDF00655373 /* Services */,
+				50CBF1F32A9E3FB400655373 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		503EE8B92BF5F8000002A275 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				50CBF21D2AA08BF400655373 /* UserDO.swift */,
+			);
+			path = DataObjects;
+			sourceTree = "<group>";
+		};
+		503EE8BA2BF5FAA10002A275 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				50CBF1EF2A9E3FB400655373 /* Auth */,
+				50CBF1F62A9E3FB400655373 /* Feed */,
+				50CBF2482AA3A71100655373 /* Main */,
+				50CBF1F52A9E3FB400655373 /* Profile */,
+				50CBF1F02A9E3FB400655373 /* Search */,
+				50CBF2452AA3A47500655373 /* Root */,
+				50CBF2312AA0EBAE00655373 /* UploadPost */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		503EE8BB2BF5FE3E0002A275 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				503EE8BC2BF5FE5B0002A275 /* Endpoints */,
+				503EE8BF2BF5FEC70002A275 /* APIService.swift */,
+				503EE8C12BF5FED80002A275 /* APIServiceProtocol.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		503EE8BC2BF5FE5B0002A275 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				503EE8BD2BF5FE830002A275 /* AuthEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		503EE8C32BF5FEEC0002A275 /* DatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseService;
+			sourceTree = "<group>";
+		};
+		503EE8C42BF603960002A275 /* InstagramFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InstagramFakeTests;
+			sourceTree = "<group>";
+		};
+		503EE9032BF77A430002A275 /* InstagramFakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InstagramFakeUITests;
+			sourceTree = "<group>";
+		};
+		503EE92B2BF783D20002A275 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50CBF1B62A9E3DD000655373 = {
 			isa = PBXGroup;
 			children = (
+				5091E6072BFC93C9005690FB /* README.md */,
+				5091E6062BFC9372005690FB /* CHANGELOG.md */,
 				50CBF1C12A9E3DD000655373 /* InstagramFake */,
+				503EE8C42BF603960002A275 /* InstagramFakeTests */,
+				503EE9032BF77A430002A275 /* InstagramFakeUITests */,
+				503EE92B2BF783D20002A275 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		50CBF1C12A9E3DD000655373 /* InstagramFake */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF2072A9F3A2B00655373 /* Helpers */,
-				50CBF1E22A9E3ED100655373 /* DataObjects */,
-				50CBF1FA2A9E3FDF00655373 /* Services */,
-				50CBF1EE2A9E3FB400655373 /* Screens */,
+				503EE8B82BEBF3990002A275 /* Common */,
+				503EE8BA2BF5FAA10002A275 /* Feature */,
+				50CBF1C92A9E3DD100655373 /* Preview Content */,
 				50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */,
 				50CBF1C62A9E3DD100655373 /* Assets.xcassets */,
 				50CBF1C82A9E3DD100655373 /* InstagramFake.entitlements */,
 				50CBF2362AA38E3E00655373 /* GoogleService-Info.plist */,
-				50CBF1C92A9E3DD100655373 /* Preview Content */,
 			);
 			path = InstagramFake;
 			sourceTree = "<group>";
@@ -141,30 +237,15 @@
 		50CBF1E22A9E3ED100655373 /* DataObjects */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF2232AA09DE900655373 /* PostDataObject.swift */,
-				50CBF21D2AA08BF400655373 /* UserDataObject.swift */,
+				50CBF2232AA09DE900655373 /* PostDO.swift */,
 			);
 			path = DataObjects;
-			sourceTree = "<group>";
-		};
-		50CBF1EE2A9E3FB400655373 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				50CBF1F32A9E3FB400655373 /* Common */,
-				50CBF1EF2A9E3FB400655373 /* Auth */,
-				50CBF1F62A9E3FB400655373 /* Feed */,
-				50CBF2482AA3A71100655373 /* Main */,
-				50CBF1F52A9E3FB400655373 /* Profile */,
-				50CBF1F02A9E3FB400655373 /* Search */,
-				50CBF2452AA3A47500655373 /* Root */,
-				50CBF2312AA0EBAE00655373 /* UploadPost */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		50CBF1EF2A9E3FB400655373 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				503EE8B92BF5F8000002A275 /* DataObjects */,
 				50CBF2422AA3914200655373 /* Services */,
 				50CBF2412AA3913600655373 /* View */,
 				50CBF24B2AA4FC0900655373 /* OO */,
@@ -181,7 +262,7 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		50CBF1F32A9E3FB400655373 /* Common */ = {
+		50CBF1F32A9E3FB400655373 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				50CBF22B2AA0DA0D00655373 /* PostGridView.swift */,
@@ -189,7 +270,7 @@
 				50CBF20E2A9F3E8F00655373 /* UserRowView.swift */,
 				50CBF1FF2A9E4A8C00655373 /* UserStatView.swift */,
 			);
-			path = Common;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		50CBF1F52A9E3FB400655373 /* Profile */ = {
@@ -213,27 +294,18 @@
 		50CBF1FA2A9E3FDF00655373 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				503EE8BB2BF5FE3E0002A275 /* APIService */,
+				503EE8C32BF5FEEC0002A275 /* DatabaseService */,
 				50CBF1FB2A9E3FEF00655373 /* MockService.swift */,
-				5023E19A2ABB0EBD0064D113 /* UserService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		50CBF2072A9F3A2B00655373 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				50CBF20A2A9F3B3E00655373 /* Constants */,
-				50CBF20B2A9F3B6800655373 /* Extensions */,
-				50CBF2122A9F484E00655373 /* Modifiers */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		50CBF20A2A9F3B3E00655373 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF2052A9F394800655373 /* GlobalConstant.swift */,
 				50CBF2082A9F3A6200655373 /* AppConstants.swift */,
+				50CBF2052A9F394800655373 /* GlobalConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -241,8 +313,8 @@
 		50CBF20B2A9F3B6800655373 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				50CBF20C2A9F3B9A00655373 /* UIColorExtension.swift */,
 				50CBF2252AA0D54700655373 /* DateExtension.swift */,
+				50CBF20C2A9F3B9A00655373 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBF2432AA3917400655373 /* AuthService.swift */,
+				5023E19A2ABB0EBD0064D113 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -340,9 +413,11 @@
 				50CBF2392AA38F0500655373 /* FirebaseAuth */,
 				50CBF23D2AA38F0500655373 /* FirebaseFirestoreSwift */,
 				50CBF23F2AA38F0500655373 /* FirebaseStorage */,
+				503EE92C2BF783D20002A275 /* FirebaseFirestore */,
+				503EE92E2BF783D20002A275 /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = InstagramFake;
-			productReference = 50CBF1BF2A9E3DD000655373 /* InstagramFake.app */;
+			productReference = 503EE8B72BEBF2860002A275 /* InstagramFake.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -407,11 +482,13 @@
 				50CBF2042A9F32EA00655373 /* FeedCellView.swift in Sources */,
 				50CBF1FE2A9E41BB00655373 /* ProfileView.swift in Sources */,
 				50CBF24A2AA3A72000655373 /* MainView.swift in Sources */,
+				503EE8BE2BF5FE830002A275 /* AuthEndpoint.swift in Sources */,
 				50CBF2262AA0D54700655373 /* DateExtension.swift in Sources */,
 				50CBF1F72A9E3FB400655373 /* SearchView.swift in Sources */,
+				503EE8C02BF5FEC70002A275 /* APIService.swift in Sources */,
 				50CBF2002A9E4A8C00655373 /* UserStatView.swift in Sources */,
 				50CBF21C2AA08A8F00655373 /* CompleteSignUpView.swift in Sources */,
-				50CBF2242AA09DE900655373 /* PostDataObject.swift in Sources */,
+				50CBF2242AA09DE900655373 /* PostDO.swift in Sources */,
 				50CBF2202AA09A5600655373 /* CurrentUserProfileView.swift in Sources */,
 				5023E19B2ABB0EBD0064D113 /* UserService.swift in Sources */,
 				50CBF22A2AA0D9A300655373 /* ProfileHeaderView.swift in Sources */,
@@ -423,9 +500,10 @@
 				50CBF2142A9F487B00655373 /* IGTextFieldModifier.swift in Sources */,
 				50CBF1F82A9E3FB400655373 /* SearchOO.swift in Sources */,
 				50CBF24F2AA7659400655373 /* LoginOO.swift in Sources */,
+				503EE8C22BF5FED80002A275 /* APIServiceProtocol.swift in Sources */,
 				50CBF2182AA0883600655373 /* CreateUserNameView.swift in Sources */,
 				50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */,
-				50CBF21E2AA08BF500655373 /* UserDataObject.swift in Sources */,
+				50CBF21E2AA08BF500655373 /* UserDO.swift in Sources */,
 				5023E1982AB33D780064D113 /* SheetRowWithIcon.swift in Sources */,
 				50CBF2092A9F3A6200655373 /* AppConstants.swift in Sources */,
 				50CBF22C2AA0DA0D00655373 /* PostGridView.swift in Sources */,
@@ -562,6 +640,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InstagramFake;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -570,8 +650,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -580,10 +660,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.a.a.ustinoff.InstagramFake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,6 +681,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InstagramFake;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -608,8 +691,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -618,10 +701,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.a.a.ustinoff.InstagramFake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -660,6 +744,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		503EE92C2BF783D20002A275 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		503EE92E2BF783D20002A275 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
 		50CBF2392AA38F0500655373 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 50CBF2382AA38F0500655373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

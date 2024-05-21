@@ -11,10 +11,30 @@ class LoginOO: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
+    
+    @Published var loading = false
+    @Published var showAlert = false
+    @Published var errorMessage = ""
+    
     func login() async throws {
-        try await AuthService.shared.login(
-            withEmail: email,
-            password: password
-        )
-    }
+            do {
+                DispatchQueue.main.async {
+                    self.loading = true
+                }
+                try await AuthService.shared.login(
+                    withEmail: email,
+                    password: password
+                )
+                DispatchQueue.main.async {
+                    self.loading = false
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.loading = false
+                    self.showAlert = true
+                    self.errorMessage = error.localizedDescription
+                }
+                throw error
+            }
+        }
 }

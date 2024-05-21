@@ -1,5 +1,5 @@
 //
-//  UserDataObject.swift
+//  UserDO.swift
 //  FirstSwiftApp
 //
 //  Created by Anton Ustinoff on 15.06.2023.
@@ -14,7 +14,7 @@ struct PostDO : Identifiable, Hashable, Codable {
     let imageUrl: String
     let timeStamp: Date
     var likes: Int
-    var user: UserDataObject
+    var user: UserDO
     
 }
 

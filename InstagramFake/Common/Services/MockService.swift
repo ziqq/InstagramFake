@@ -10,8 +10,8 @@ import Foundation
 class MockService {
     public static let shared = MockService()
     
-    /// Return UserDataObject
-    func getUser() -> UserDataObject {
+    /// Return UserDO
+    func getUser() -> UserDO {
         .init(
             id: NSUUID().uuidString,
             email: "ironman@gmail.com",
@@ -22,9 +22,9 @@ class MockService {
         )
     }
     
-    /// Return [UserDataObject]
+    /// Return [UserDO]
     /// Array lenght is 9
-    func getUsers() -> [UserDataObject] {
+    func getUsers() -> [UserDO] {
         return [
             .init(
                 id: NSUUID().uuidString,
@@ -103,8 +103,8 @@ class MockService {
     }
     
     
-    func getPost() -> PostDataObject {
-        return PostDataObject(
+    func getPost() -> PostDO {
+        return PostDO(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
             capton: "This is caption",
@@ -115,7 +115,7 @@ class MockService {
     }
     
     
-    func getPosts() -> [PostDataObject] {
+    func getPosts() -> [PostDO] {
         return [
             .init(
                 id: NSUUID().uuidString,

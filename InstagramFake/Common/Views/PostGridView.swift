@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostGridView: View {
-    let posts: [PostDataObject]
+    let posts: [PostDO]
     
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),

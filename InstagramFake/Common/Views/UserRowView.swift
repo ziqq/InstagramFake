@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserRowView: View {
-    let user: UserDataObject
+    let user: UserDO
     
     var body: some View {
         HStack  {

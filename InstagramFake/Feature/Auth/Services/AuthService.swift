@@ -32,6 +32,7 @@ class AuthService {
             try await loadUserData()
         } catch {
             print("[DEBUG]: AuthService | login | Failed to login with error \(error.localizedDescription)")
+            throw error
         }
     }
     
