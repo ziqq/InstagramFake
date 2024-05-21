@@ -14,7 +14,7 @@ import FirebaseFirestoreSwift
 
 class AuthService {
     @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: UserDataObject?
+    @Published var currentUser: UserDO?
     
     static let shared = AuthService()
     
@@ -56,8 +56,8 @@ class AuthService {
         self.userSession = Auth.auth().currentUser
         guard let currentUid = userSession?.uid else { return }
         let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument()
-        print("[DEBUG]: AuthService | loadUserData | snapshot data is \(snapshot.data())")
-        self.currentUser = try? snapshot.data(as: UserDataObject.self)
+        print("[DEBUG]: AuthService | loadUserData | snapshot data is \(String(describing: snapshot.data()))")
+        self.currentUser = try? snapshot.data(as: UserDO.self)
     }
     
     func signOut() {
@@ -68,7 +68,7 @@ class AuthService {
     }
     
     private func uploadUserData(uid: String, email: String, userName: String) async {
-        let user = UserDataObject(id: uid, email: email, userName: userName)
+        let user = UserDO(id: uid, email: email, userName: userName)
         self.currentUser = user
         
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }

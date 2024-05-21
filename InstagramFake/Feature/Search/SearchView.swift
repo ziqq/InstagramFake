@@ -38,7 +38,7 @@ struct SearchView: View {
                     })
                 }
             }
-            .navigationDestination(for: UserDataObject.self) { user in
+            .navigationDestination(for: UserDO.self) { user in
                 ProfileView(user: user)
             }
             .navigationTitle("Explore")

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FeedCellView: View {
-    let post: PostDataObject
+    let post: PostDO
     
     var body: some View {
         VStack {

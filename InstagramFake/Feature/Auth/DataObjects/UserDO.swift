@@ -1,5 +1,5 @@
 //
-//  UserDataObject.swift
+//  UserDO.swift
 //  FirstSwiftApp
 //
 //  Created by Anton Ustinoff on 15.06.2023.
@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-struct UserDataObject : Identifiable, Hashable, Codable {
+struct UserDO : Identifiable, Hashable, Codable {
     let id: String
     let email: String
     var bio: String?
@@ -22,9 +22,9 @@ struct UserDataObject : Identifiable, Hashable, Codable {
     }
 }
 
-//extension UserDataObject {
-//    static func mock() -> UserDataObject {
-//        return UserDataObject(
+//extension UserDO {
+//    static func mock() -> UserDO {
+//        return UserDO(
 //            id: NSUUID().uuidString,
 //            email: "ironman@gmail.com",
 //            bio: "I'm bellionere",

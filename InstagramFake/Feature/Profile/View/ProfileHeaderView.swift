@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
-    let user: UserDataObject
+    let user: UserDO
     
     var body: some View {
         VStack() {

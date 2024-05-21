@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    let user: UserDataObject
+    let user: UserDO
     
     private let lightImpact = UIImpactFeedbackGenerator(style: .light)
     

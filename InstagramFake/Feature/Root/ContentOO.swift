@@ -14,7 +14,7 @@ class ContentOO: ObservableObject {
     private var cancellabels = Set<AnyCancellable>()
     
     @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: UserDataObject?
+    @Published var currentUser: UserDO?
     
     init() {
         setupSubscribers()

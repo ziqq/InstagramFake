@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    let user: UserDataObject
+    let user: UserDO
     
     @State private var mainSelectedIndex = 0
     

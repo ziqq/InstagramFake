@@ -8,8 +8,8 @@
 import Foundation
 
 class SearchOO: ObservableObject {
-    @Published var data: [UserDataObject] = []
-    @Published var serchResults: [UserDataObject] = []
+    @Published var data: [UserDO] = []
+    @Published var serchResults: [UserDO] = []
     
     init() {
         Task { try await fetchAllUsers() }

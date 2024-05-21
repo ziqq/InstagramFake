@@ -8,9 +8,7 @@
 import Foundation
 
 class ProfileObservableObject: ObservableObject {
-    var data: [PostDataObject] = []
-    
-    
+    var data: [PostDO] = []
     
     init() {
         data = MockService.shared.getPosts();

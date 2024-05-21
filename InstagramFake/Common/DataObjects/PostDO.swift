@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PostDataObject : Identifiable, Hashable, Codable {
+struct PostDO : Identifiable, Hashable, Codable {
     let id: String
     let ownerUid: String
     let capton: String
