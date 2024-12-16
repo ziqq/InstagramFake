@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileObservableObject: ObservableObject {
+class ProfileOO: ObservableObject {
     var data: [PostDO] = []
     
     init() {
