@@ -45,11 +45,11 @@ struct CreatePasswordView: View {
                     .fontWeight(.semibold)
                     .frame(
                         width: screenWidth - AppConstants.Design.Padding.medium * 2,
-                        height: AppConstants.Design.ButtonSize.base
+                        height: AppConstants.Design.ButtonSize.regular
                     )
                     .background(Color(.systemBlue))
                     .foregroundColor(.white)
-                    .cornerRadius(AppConstants.Design.Corner.base)
+                    .cornerRadius(AppConstants.Design.Corner.regular)
                     .padding(.top)
             }
             

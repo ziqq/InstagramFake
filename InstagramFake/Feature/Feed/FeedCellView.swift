@@ -26,7 +26,7 @@ struct FeedCellView: View {
                 
                 Spacer()
             }
-            .padding(.leading, AppConstants.Design.Padding.base)
+            .padding(.leading, AppConstants.Design.Padding.regular)
             
             // MARK: - post image
             Image(post.imageUrl)
@@ -37,7 +37,7 @@ struct FeedCellView: View {
             
             
             // MARK: - action buttons
-            HStack(spacing: AppConstants.Design.Padding.base / 2) {
+            HStack(spacing: AppConstants.Design.Padding.regular / 2) {
                 Button {
                     print("--------> Like post")
                 } label: {
@@ -59,7 +59,7 @@ struct FeedCellView: View {
                 Spacer()
             }
             .foregroundColor(.black)
-            .padding(.horizontal, AppConstants.Design.Padding.base / 1.5)
+            .padding(.horizontal, AppConstants.Design.Padding.regular / 1.5)
             .padding(.top, 2)
             
             // MARK: - likes label
@@ -67,7 +67,7 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, AppConstants.Design.Padding.base)
+                .padding(.leading, AppConstants.Design.Padding.regular)
                 .padding(.top, 1)
             
             // MARK: - caption label
@@ -77,7 +77,7 @@ struct FeedCellView: View {
             }
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, AppConstants.Design.Padding.base)
+            .padding(.leading, AppConstants.Design.Padding.regular)
             .padding(.top, 1)
             
             // MARK: - time stamp 5h ago
@@ -85,7 +85,7 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, AppConstants.Design.Padding.base)
+                .padding(.leading, AppConstants.Design.Padding.regular)
                 .padding(.top, 1)
                 .foregroundColor(.gray)
             
@@ -94,7 +94,7 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, AppConstants.Design.Padding.base)
+                .padding(.leading, AppConstants.Design.Padding.regular)
                 .padding(.top, 1)
                 .foregroundColor(.gray)
         }

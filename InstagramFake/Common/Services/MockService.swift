@@ -114,6 +114,20 @@ class MockService {
         );
     }
     
+    func getPostsFromNetwork() -> [PostDO] {
+        return (0..<251).map { index in
+            PostDO(
+                id: NSUUID().uuidString,
+                ownerUid: NSUUID().uuidString,
+                capton: "This is caption form post \(index)",
+                imageUrl: "https://loremflickr.com/320/320/music?lock=\(index)",
+                timeStamp: Date.now,
+                likes: Int.random(in: 1...100), // Случайное количество лайков
+                user: getUsers()[index % getUsers().count] // Цикличное использование пользователей
+            )
+        }
+    }
+    
     
     func getPosts() -> [PostDO] {
         return [

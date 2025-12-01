@@ -13,19 +13,18 @@ struct CurrentUserProfileView: View {
     private let lightImpact = UIImpactFeedbackGenerator(style: .light)
     
     @State private var isShowingSheet = false
-    
-    @StateObject var oo = ProfileObservableObject()
-    
     @State private var showSheet = false
+    
+    @StateObject var oo = ProfileOO()
     
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                // header
+                // Header
                 ProfileHeaderView(user: user)
                 
-                // post grid view
+                // Post grid view
                 PostGridView(posts: oo.data.filter({$0.user.userName == user.userName}))
             }
             .navigationTitle("Profile")

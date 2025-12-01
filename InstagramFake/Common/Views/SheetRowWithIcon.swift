@@ -19,8 +19,8 @@ struct SheetRowWithIcon: View {
                 .resizable()
                 .scaledToFit()
                 .frame(
-                    width: AppConstants.Design.IconSize.base,
-                    height: AppConstants.Design.IconSize.base
+                    width: AppConstants.Design.IconSize.regular,
+                    height: AppConstants.Design.IconSize.regular
                 )
         }
         .labelStyle(.titleAndIcon)

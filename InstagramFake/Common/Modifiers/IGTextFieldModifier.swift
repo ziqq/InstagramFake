@@ -13,7 +13,7 @@ struct IGTextFieldModifier: ViewModifier {
             .font(.subheadline)
             .padding(AppConstants.Design.Padding.small)
             .background(Color(.systemGray6))
-            .cornerRadius(AppConstants.Design.Corner.base)
+            .cornerRadius(AppConstants.Design.Corner.regular)
             .padding(.horizontal, AppConstants.Design.Padding.medium)
     }
 }

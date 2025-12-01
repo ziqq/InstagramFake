@@ -46,6 +46,9 @@ struct AppConstants {
     struct Design {
         struct AvatarSize {
             /// value: 40.0
+            static let regular: CGFloat = 50.0
+            
+            /// value: 40.0
             static let small: CGFloat = 40.0
             
             /// value: 100.0
@@ -54,7 +57,7 @@ struct AppConstants {
         
         struct ButtonSize {
             /// Base button size: 44.0
-            static let base: CGFloat = 44.0
+            static let regular: CGFloat = 44.0
             
             /// Small button size: 38.0
             static let small: CGFloat = 38.0
@@ -65,7 +68,7 @@ struct AppConstants {
         
         struct IconSize {
             /// Base icon size: 24.0
-            static let base: CGFloat = 24.0
+            static let regular: CGFloat = 24.0
             
             /// Base icon size: 18.0
             static let small: CGFloat = 18.0
@@ -87,11 +90,11 @@ struct AppConstants {
         }
         
         struct Corner {
+            /// Base corner raduis: 10.0
+            static let regular: CGFloat = 10.0
+            
             /// Small corner raduis: 8.0
             static let small: CGFloat = 8.0
-            
-            /// Base corner raduis: 10.0
-            static let base: CGFloat = 10.0
         }
         
         struct Image {
@@ -107,7 +110,7 @@ struct AppConstants {
         
         struct Padding {
             /// Base app offset: 16.0
-            static let base: CGFloat = 16.0
+            static let regular: CGFloat = 16.0
             
             /// Extra small app offset: 8.0
             static let extraSmall: CGFloat = 8.0

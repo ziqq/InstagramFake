@@ -12,15 +12,15 @@ struct ProfileView: View {
     
     private let lightImpact = UIImpactFeedbackGenerator(style: .light)
     
-    @StateObject var oo = ProfileObservableObject()
+    @StateObject var oo = ProfileOO()
     
     var body: some View {
         ScrollView {
             VStack {
-                // header
+                // Header
                 ProfileHeaderView(user: user)
                 
-                // post grid view
+                // Post grid view
                 PostGridView(posts: oo.data.filter({$0.user.userName == user.userName}))
             }
         }

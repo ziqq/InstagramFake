@@ -1,27 +1,43 @@
+//
+//  NetworkImageView.swift
+//  InstagramFake
+//
+//  Created by Anton Ustinoff on 16.12.2024.
+//
+
+
 import SwiftUI
 
 struct NetworkImageView: View {
-    let url = URL(string: "https://loremflickr.com/320/240/music?lock=1")!
+    let url: URL
 
     var body: some View {
         AsyncImage(url: url) { phase in
             switch phase {
-            case .empty:
-                ProgressView() // Загрузка
-            case .success(let image):
+                case .empty:
+                ProgressView()
+                case .success(let image):
                 image
                     .resizable()
-                    .scaledToFit() // Масштабирование
-            case .failure:
-                Image(systemName: "photo") // Ошибка
+                    .scaledToFit()
+                case .failure:
+                Image(systemName: "photo")
                     .resizable()
                     .scaledToFit()
                     .foregroundColor(.gray)
-            @unknown default:
-                EmptyView()
+                @unknown default:
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
             }
         }
-        .frame(width: 320, height: 240)
-        .clipShape(RoundedRectangle(cornerRadius: 10)) // Закругленные углы
+    }
+}
+
+
+struct NetworkImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        NetworkImageView(url: URL(string: MockService.shared.getPostsFromNetwork().first!.imageUrl)!)
     }
 }

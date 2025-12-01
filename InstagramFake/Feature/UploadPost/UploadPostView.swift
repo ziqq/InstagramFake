@@ -48,7 +48,7 @@ struct UploadPostView: View {
             }.padding(.horizontal)
             
             // MARK:- Photo + Comment
-            HStack(spacing: AppConstants.Design.Padding.base / 2) {
+            HStack(spacing: AppConstants.Design.Padding.regular / 2) {
                 if let image = oo.postImage {
                     image
                         .resizable()

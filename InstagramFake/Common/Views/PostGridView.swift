@@ -19,13 +19,19 @@ struct PostGridView: View {
     private let imageDimention: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
     var body: some View {
-        LazyVGrid(columns: gridItems, spacing: 1) {
-            ForEach(posts) { post in
-                Image(post.imageUrl)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: imageDimention, height: imageDimention)
-                    .clipped()
+        ScrollView{
+            LazyVGrid(columns: gridItems, spacing: 1) {
+                ForEach(posts) { post in
+                    NetworkImageView(url: URL(string: post.imageUrl)!)
+                        .scaledToFill()
+                        .frame(width: imageDimention, height: imageDimention)
+                        .clipped()
+//                    Image(post.imageUrl)
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(width: imageDimention, height: imageDimention)
+//                        .clipped()
+                }
             }
         }
     }
@@ -33,6 +39,6 @@ struct PostGridView: View {
 
 struct PostGridView_Previews: PreviewProvider {
     static var previews: some View {
-        PostGridView(posts: MockService.shared.getPosts())
+        PostGridView(posts: MockService.shared.getPostsFromNetwork())
     }
 }

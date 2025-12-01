@@ -14,6 +14,7 @@
 		503EE8C22BF5FED80002A275 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503EE8C12BF5FED80002A275 /* APIServiceProtocol.swift */; };
 		503EE92D2BF783D20002A275 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 503EE92C2BF783D20002A275 /* FirebaseFirestore */; };
 		503EE92F2BF783D20002A275 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 503EE92E2BF783D20002A275 /* FirebaseFirestoreCombine-Community */; };
+		50C309EA2D1022E00058F556 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C309E92D1022E00058F556 /* NetworkImageView.swift */; };
 		50CBF1C32A9E3DD000655373 /* InstagramFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */; };
 		50CBF1C52A9E3DD000655373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBF1C42A9E3DD000655373 /* ContentView.swift */; };
 		50CBF1C72A9E3DD100655373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBF1C62A9E3DD100655373 /* Assets.xcassets */; };
@@ -58,12 +59,13 @@
 /* Begin PBXFileReference section */
 		5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRowWithIcon.swift; sourceTree = "<group>"; };
 		5023E19A2ABB0EBD0064D113 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		503EE8B72BEBF2860002A275 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramFake.app; path = /Users/ziqq/Desktop/git/ziqq/InstagramFake/build/Debug/InstagramFake.app; sourceTree = "<absolute>"; };
 		503EE8BD2BF5FE830002A275 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		503EE8BF2BF5FEC70002A275 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		503EE8C12BF5FED80002A275 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
 		5091E6062BFC9372005690FB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		5091E6072BFC93C9005690FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50C309E82D101E1E0058F556 /* InstagramFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C309E92D1022E00058F556 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		50CBF1C22A9E3DD000655373 /* InstagramFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFakeApp.swift; sourceTree = "<group>"; };
 		50CBF1C42A9E3DD000655373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50CBF1C62A9E3DD100655373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +202,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5091E6082C04CB16005690FB /* OO */ = {
+			isa = PBXGroup;
+			children = (
+				50CBF2272AA0D6A500655373 /* ProfileOO.swift */,
+			);
+			path = OO;
+			sourceTree = "<group>";
+		};
 		50CBF1B62A9E3DD000655373 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 				503EE8C42BF603960002A275 /* InstagramFakeTests */,
 				503EE9032BF77A430002A275 /* InstagramFakeUITests */,
 				503EE92B2BF783D20002A275 /* Frameworks */,
+				50C309E82D101E1E0058F556 /* InstagramFake.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,6 +276,7 @@
 		50CBF1F32A9E3FB400655373 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				50C309E92D1022E00058F556 /* NetworkImageView.swift */,
 				50CBF22B2AA0DA0D00655373 /* PostGridView.swift */,
 				5023E1972AB33D780064D113 /* SheetRowWithIcon.swift */,
 				50CBF20E2A9F3E8F00655373 /* UserRowView.swift */,
@@ -277,7 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBF22E2AA0DB7300655373 /* View */,
-				50CBF2272AA0D6A500655373 /* ProfileOO.swift */,
+				5091E6082C04CB16005690FB /* OO */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -417,7 +429,7 @@
 				503EE92E2BF783D20002A275 /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = InstagramFake;
-			productReference = 503EE8B72BEBF2860002A275 /* InstagramFake.app */;
+			productReference = 50C309E82D101E1E0058F556 /* InstagramFake.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -490,6 +502,7 @@
 				50CBF21C2AA08A8F00655373 /* CompleteSignUpView.swift in Sources */,
 				50CBF2242AA09DE900655373 /* PostDO.swift in Sources */,
 				50CBF2202AA09A5600655373 /* CurrentUserProfileView.swift in Sources */,
+				50C309EA2D1022E00058F556 /* NetworkImageView.swift in Sources */,
 				5023E19B2ABB0EBD0064D113 /* UserService.swift in Sources */,
 				50CBF22A2AA0D9A300655373 /* ProfileHeaderView.swift in Sources */,
 				50CBF2282AA0D6A500655373 /* ProfileOO.swift in Sources */,

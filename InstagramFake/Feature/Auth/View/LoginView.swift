@@ -75,11 +75,11 @@ struct LoginView: View {
                 }
                 .frame(
                     width: screenWidth - AppConstants.Design.Padding.medium * 2,
-                    height: AppConstants.Design.ButtonSize.base
+                    height: AppConstants.Design.ButtonSize.regular
                 )
                 .foregroundColor(.white)
                 .background(Color(.systemBlue))
-                .cornerRadius(AppConstants.Design.Corner.base)
+                .cornerRadius(AppConstants.Design.Corner.regular)
                 .padding(.top)
                 
                 // MARK:- "Or" divider
@@ -106,14 +106,14 @@ struct LoginView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(
-                                width: AppConstants.Design.IconSize.base,
-                                height: AppConstants.Design.IconSize.base
+                                width: AppConstants.Design.IconSize.regular,
+                                height: AppConstants.Design.IconSize.regular
                             )
                         
                         Text("Continue with Facebook")
                             .font(.subheadline)
                             .fontWeight(.semibold)
-                            .cornerRadius(AppConstants.Design.Corner.base)
+                            .cornerRadius(AppConstants.Design.Corner.regular)
                     }
                 }
                 
